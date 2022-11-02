@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Gallery</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+body{
+  background-image: url("Bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+h1{color: white;}
+.mySlides {display:none;}
+ }
+  h6{
+  font-size: 20px;
+}
+</style>
+
+
+<body>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="image.html"><h6>Image</h6></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+      </li>
+       <li class="nav-item">
+      <a class="nav-link" href="Home.html">Home</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="Service.html">Service</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="About Us.html">About Us </a>
+      </li>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="LOGIN.html">Log-Out</a>
+      </li>
+      </ul>
+    </div>
+  </nav>
+
+<center><h1>Sample Gallery</h1>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="1.jpeg" style="width:70%" style="height: 50%">
+  <img class="mySlides" src="2.jpeg" style="width:70%" style="height: 50%">
+  <img class="mySlides" src="3.jpeg" style="width:70%" style="height: 30%">
+  <img class="mySlides" src="4.jpeg" style="width:70%" style="height: 50%"> 
+  <img class="mySlides" src="5.jpeg" style="width:70%" style="height: 50%">
+  <img class="mySlides" src="6.jpeg" style="width:70%" style="height: 50%">
+  <img class="mySlides" src="7.jpeg" style="width:70%" style="height: 30%">
+  <img class="mySlides" src="8.jpeg" style="width:70%" style="height: 50%"> 
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+</center>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
